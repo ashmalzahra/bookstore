@@ -1,4 +1,4 @@
-const Books = (props) => {
+const Book = (props) => {
     const {title, author} = props
 
     return(
@@ -9,4 +9,4 @@ const Books = (props) => {
     )
 }
 
-export default Books
+export default Book
