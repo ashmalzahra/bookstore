@@ -95,7 +95,6 @@ Clone this repository to get started with the project, make sure to configure li
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **Add reducers and actions**
 - [ ] **Use Redux in React components**
 - [ ] **Connect to API.**
 - [ ] **Styling**
