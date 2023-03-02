@@ -1,7 +1,5 @@
-const AddButton = () => {
-    return(
-        <button type="submit">Add book</button>
-    )
-}
+const AddButton = () => (
+  <button type="submit">Add book</button>
+);
 
-export default AddButton
+export default AddButton;

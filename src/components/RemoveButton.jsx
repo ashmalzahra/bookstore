@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 const RemoveButton = (props) => {
-    const {onClick} = props
+  const { onClick } = props;
 
-    return(
+  return (
     <button type="button" onClick={onClick}>
-        Remove
+      Remove
     </button>
-    )
-}
+  );
+};
 
 export default RemoveButton;
