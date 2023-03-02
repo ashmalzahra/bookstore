@@ -15,6 +15,7 @@
 - [🔭 Future Features ](#-future-features-)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -120,6 +121,14 @@ Feel free to check the [issues page](https://github.com/ashmalzahra/math-magicia
 Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverse for its guidance throughout this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)<tra/p>
 
 <!-- LICENSE -->
 
