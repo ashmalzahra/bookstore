@@ -3,6 +3,11 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   categories: [],
 };
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+  categories: [],
+};
 
 const categoriesSlice = createSlice({
   name: 'categories',
@@ -10,7 +15,7 @@ const categoriesSlice = createSlice({
   reducers: {
     status: (state) => ({
       ...state,
-      categories: 'Under construction',
+      categories: ['Under construction'],
     }),
   },
 });
