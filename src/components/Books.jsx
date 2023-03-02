@@ -7,7 +7,7 @@ const Book = (props) => {
   const dispatch = useDispatch();
   const { id, title, author } = props;
 
-  const handleClick = () => {
+  const handleRemoveBook = () => {
     dispatch(removeBook(id))
   }
 
@@ -17,7 +17,7 @@ const Book = (props) => {
       { title }
       &quot; by
       { author }
-      <RemoveButton onClick={handleClick}/>
+      <RemoveButton onClick={handleRemoveBook}/>
     </li>
   );
 };
