@@ -1,7 +1,15 @@
 /* eslint-disable react/prop-types */
+import { useDispatch } from 'react-redux';
+import {removeBook} from '../redux/books/booksSlice'
+import RemoveButton from './RemoveButton';
 
 const Book = (props) => {
-  const { title, author } = props;
+  const dispatch = useDispatch();
+  const { id, title, author } = props;
+
+  const handleClick = () => {
+    dispatch(removeBook(id))
+  }
 
   return (
     <li>
@@ -9,7 +17,7 @@ const Book = (props) => {
       { title }
       &quot; by
       { author }
-      <button type="button">Remove</button>
+      <RemoveButton onClick={handleClick}/>
     </li>
   );
 };

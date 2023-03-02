@@ -9,7 +9,7 @@ const Books = () => {
   <div>
     <ul>
     {books.map((book) => {
-      return <Book key={book.item_id} title={book.title} author={book.author}/>
+      return <Book key={book.item_id} id={book.item_id} title={book.title} author={book.author}/>
     })}
     </ul>
     <Form />
