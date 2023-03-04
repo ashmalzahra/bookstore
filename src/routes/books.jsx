@@ -1,23 +1,22 @@
-import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import Book from '../components/Books';
+import { useSelector, useDispatch } from 'react-redux';
 import Form from '../components/Form';
+import Book from '../components/Books';
 import { fetchBooks } from '../redux/books/booksSlice';
 
 const Books = () => {
   const dispatch = useDispatch();
-  const books = useSelector((store) => store.books.books);
-  const isLoading = useSelector((store) => store.books.isLoading);
+  const { books, isLoading } = useSelector((state) => state.books);
 
   useEffect(() => {
-    dispatch(fetchBooks);
+    dispatch(fetchBooks());
   }, [dispatch]);
 
-  let content;
+  let data;
   if (isLoading) {
-    content = <p>Loading...</p>;
+    data = <p>Loading...</p>;
   } else {
-    content = Object.keys(books).map((key) => {
+    data = Object.keys(books).map((key) => {
       const currentBook = books[key][0];
       return (
         <Book
@@ -33,7 +32,7 @@ const Books = () => {
   return (
     <section>
       <h1>List of books</h1>
-      <ul>{content}</ul>
+      <ul>{data}</ul>
       <Form />
     </section>
   );

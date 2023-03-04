@@ -26,14 +26,14 @@ const Form = () => {
   const handleChange = (e) => {
     setBook((prevState) => ({
       ...prevState,
-      [e.target.id]: e.target.value,
+      [e.target.name]: e.target.value,
     }));
   };
 
   return (
     <form onSubmit={handleAddBook}>
-      <input type="text" placeholder="Title" id="title" value={book.title} onChange={handleChange} />
-      <input type="text" placeholder="Author" id="author" value={book.author} onChange={handleChange} />
+      <input type="text" placeholder="Title" name="title" value={book.title} onChange={handleChange} />
+      <input type="text" placeholder="Author" name="author" value={book.author} onChange={handleChange} />
       <AddButton />
     </form>
   );

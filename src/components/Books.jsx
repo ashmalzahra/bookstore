@@ -15,7 +15,8 @@ const Book = (props) => {
     <li>
       &quot;
       { title }
-      &quot; by
+      &quot;
+      by &nbsp;
       { author }
       <RemoveButton onClick={handleRemoveBook} />
     </li>
