@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/booksSlice';
+import { postBook } from '../redux/books/booksSlice';
 import AddButton from './AddButton';
 
 const Form = () => {
@@ -13,9 +13,10 @@ const Form = () => {
     const id = uuidv4();
     const addNewBook = {
       item_id: id,
+      category: 'Fiction',
       ...book,
     };
-    dispatch(addBook(addNewBook));
+    dispatch(postBook(addNewBook));
     setBook({
       title: '',
       author: '',
