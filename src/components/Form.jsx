@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../redux/books/booksSlice';
+import { postBook } from '../redux/books/booksSlice';
 import AddButton from './AddButton';
 
 const Form = () => {
@@ -13,9 +13,10 @@ const Form = () => {
     const id = uuidv4();
     const addNewBook = {
       item_id: id,
+      category: 'Fiction',
       ...book,
     };
-    dispatch(addBook(addNewBook));
+    dispatch(postBook(addNewBook));
     setBook({
       title: '',
       author: '',
@@ -25,14 +26,14 @@ const Form = () => {
   const handleChange = (e) => {
     setBook((prevState) => ({
       ...prevState,
-      [e.target.id]: e.target.value,
+      [e.target.name]: e.target.value,
     }));
   };
 
   return (
     <form onSubmit={handleAddBook}>
-      <input type="text" placeholder="Title" id="title" value={book.title} onChange={handleChange} />
-      <input type="text" placeholder="Author" id="author" value={book.author} onChange={handleChange} />
+      <input type="text" placeholder="Title" name="title" value={book.title} onChange={handleChange} />
+      <input type="text" placeholder="Author" name="author" value={book.author} onChange={handleChange} />
       <AddButton />
     </form>
   );
