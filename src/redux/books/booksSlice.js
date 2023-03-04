@@ -6,8 +6,15 @@ const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstor
 
 const initialState = {
   books: {},
+  ifSucceed: false,
   isLoading: false,
   error: null,
+};
+
+const headers = {
+  headers: {
+    'content-type': 'application/json',
+  },
 };
 
 const fetchBooks = createAsyncThunk(
@@ -22,11 +29,10 @@ const fetchBooks = createAsyncThunk(
   },
 );
 
-const postBook = createAsyncThunk('books/addBooks', async (book) => {
-  const data = JSON.stringify(book);
+const postBook = createAsyncThunk('books/postBook', async (book) => {
   try {
-    const response = await axios.post(url, data);
-    return response.data;
+    await axios.post(url, book, headers);
+    return book;
   } catch (error) {
     return error;
   }
@@ -35,7 +41,7 @@ const postBook = createAsyncThunk('books/addBooks', async (book) => {
 const removeBook = createAsyncThunk('books/removeBook', async (id) => {
   const data = JSON.stringify({ item_id: id });
   try {
-    const response = await axios.delete(url + id, data);
+    const response = await axios.delete(url + id, data, headers);
     return response.data;
   } catch (error) {
     return error;
@@ -52,6 +58,7 @@ const booksSlice = createSlice({
     },
     [fetchBooks.fulfilled]: (state, action) => {
       state.isLoading = false;
+      state.ifSucceed = true;
       state.books = action.payload;
     },
     [fetchBooks.rejected]: (state) => {
@@ -63,6 +70,7 @@ const booksSlice = createSlice({
     },
     [postBook.fulfilled]: (state) => {
       state.isLoading = false;
+      state.ifSucceed = false;
     },
     [postBook.rejected]: (state) => {
       state.isLoading = false;
@@ -73,6 +81,7 @@ const booksSlice = createSlice({
     },
     [removeBook.fulfilled]: (state) => {
       state.isLoading = false;
+      state.ifSucceed = false;
     },
     [removeBook.rejected]: (state) => {
       state.isLoading = false;

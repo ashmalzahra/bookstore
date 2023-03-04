@@ -6,17 +6,19 @@ import { fetchBooks } from '../redux/books/booksSlice';
 
 const Books = () => {
   const dispatch = useDispatch();
-  const { books, isLoading } = useSelector((state) => state.books);
+  const ifSucceed = useSelector((store) => (store.books.ifSucceed));
+  const books = useSelector((store) => store.books.books);
+  const isLoading = useSelector((store) => store.books.isLoading);
 
   useEffect(() => {
     dispatch(fetchBooks());
-  }, [dispatch]);
+  }, [ifSucceed, dispatch]);
 
-  let data;
+  let content;
   if (isLoading) {
-    data = <p>Loading...</p>;
-  } else {
-    data = Object.keys(books).map((key) => {
+    content = <p>Loading...</p>;
+  } else if (ifSucceed) {
+    content = Object.keys(books).map((key) => {
       const currentBook = books[key][0];
       return (
         <Book
@@ -32,7 +34,7 @@ const Books = () => {
   return (
     <section>
       <h1>List of books</h1>
-      <ul>{data}</ul>
+      <ul>{content}</ul>
       <Form />
     </section>
   );
