@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { postBook } from '../redux/books/booksSlice';
 import AddButton from './AddButton';
-import './Form.css'
+import './Form.css';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -35,9 +35,9 @@ const Form = () => {
     <form onSubmit={handleAddBook}>
       <h3>Add new book</h3>
       <div className="form-inputs">
-      <input type="text" placeholder="Book title" name="title" value={book.title} onChange={handleChange} />
-      <input type="text" placeholder="Author" name="author" value={book.author} onChange={handleChange} />
-      <AddButton />
+        <input type="text" placeholder="Book title" name="title" value={book.title} onChange={handleChange} />
+        <input type="text" placeholder="Author" name="author" value={book.author} onChange={handleChange} />
+        <AddButton />
       </div>
     </form>
   );

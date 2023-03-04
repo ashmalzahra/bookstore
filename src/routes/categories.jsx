@@ -17,5 +17,4 @@ const Categories = () => {
   return <section>{content}</section>;
 };
 
-
 export default Categories;

@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { removeBook } from '../redux/books/booksSlice';
 import RemoveButton from './RemoveButton';
-import './Books.css'
+import 'react-circular-progressbar/dist/styles.css';
+import './Books.css';
 
 const Book = (props) => {
   const dispatch = useDispatch();
