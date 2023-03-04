@@ -34,7 +34,7 @@ const Books = () => {
   return (
     <section>
       <h1>List of books</h1>
-      <ul>{content}</ul>
+      <ul style={{padding: 0, listStyle: none}}>{content}</ul>
       <Form />
     </section>
   );
