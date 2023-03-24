@@ -126,7 +126,7 @@ Give a ⭐️ if you like this project!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for its guidance throughout this project.
+Design parse from [Zeplin Project](https://app.zeplin.io/project/5b35a9e13227086040f8eb75/screen/5b695e29bb8c844f118f9378)
 
 <p align="right">(<a href="#readme-top">back to top</a>)<tra/p>
 
