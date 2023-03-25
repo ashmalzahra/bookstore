@@ -12,7 +12,6 @@
   - [Setup](#setup)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
-- [🔭 Future Features ](#-future-features-)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -91,15 +90,6 @@ Clone this repository to get started with the project, make sure to configure li
 - GitHub: [@githubhandle](https://github.com/ashmalzahra)
 - Twitter: [@twitterhandle](https://twitter.com/AshmalZahraa)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/ashmal-zahra-35bb09242/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **Use Redux in React components**
-- [ ] **Connect to API.**
-- [ ] **Styling**
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
