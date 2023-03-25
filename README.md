@@ -37,7 +37,7 @@ The Bookstore is a website that allows you to:
 
 ## Live Demo
 
-[Live Demo Link](Not available)
+[Live Demo Link](https://bookstore-bfbr.onrender.com/)
 
 <!-- Features -->
 
@@ -110,7 +110,7 @@ Clone this repository to get started with the project, make sure to configure li
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ashmalzahra/math-magicians/issues).
+Feel free to check the [issues page](https://github.com/ashmalzahra/bookstore/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
